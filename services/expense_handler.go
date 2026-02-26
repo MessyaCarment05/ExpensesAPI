@@ -73,6 +73,7 @@ func CreateExpense(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		http.Error(w, "invalid date format", http.StatusBadRequest)
+		return
 	}
 	var category_id int
 	var payment_id int
