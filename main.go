@@ -16,6 +16,10 @@ func main() {
 			services.GetExpenses(w,r)
 		case http.MethodPost:
 			services.CreateExpense(w,r)
+		case http.MethodDelete:
+			services.DeleteExpense(w, r)
+		case http.MethodPut:
+			services.UpdateExpenses(w,r)
 		default:
 			http.Error(w, "method not allowed", 405)
 
